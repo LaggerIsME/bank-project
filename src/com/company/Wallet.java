@@ -4,7 +4,11 @@ public class Wallet {
     private Double money;
     private Double deposit;
     private Double credit;
-
+    public Wallet(Double money, Double deposit, Double credit){
+        setMoney(money);
+        setDeposit(deposit);
+        setCredit(credit);
+    }
     public Double getMoney() {
         return money;
     }
@@ -27,5 +31,9 @@ public class Wallet {
 
     public void setCredit(Double credit) {
         this.credit = credit;
+    }
+    @Override
+    public String toString(){
+        return "MONEY: " + getMoney() +"\n"+"DEPOSIT: " + getDeposit() +"\n"+"CREDIT: " + getCredit() ;
     }
 }
