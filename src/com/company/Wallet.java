@@ -9,6 +9,11 @@ public class Wallet {
         setDeposit(deposit);
         setCredit(credit);
     }
+    public Wallet(){
+        setMoney(500.0);
+        setDeposit(500.0);
+        setCredit(500.0);
+    }
     public Double getMoney() {
         return money;
     }

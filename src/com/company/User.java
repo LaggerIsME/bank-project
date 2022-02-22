@@ -6,13 +6,42 @@ public class User {
     private String number;
     private int id;
     private String password;
-    public User(String  surname, String name, String number, String password){
+    private Wallet wallet;
+    public User(String  surname, String name, String number, String password, Wallet wallet){
         setSurname(surname);
         setName(name);
         setNumber(number);
         setId(id);
         setPassword(password);
+        setWallet(wallet);
     }
+    public User(String  surname, String name, String number, String password) {
+        setSurname(surname);
+        setName(name);
+        setNumber(number);
+        setId(id);
+        setPassword(password);
+        Wallet wallet = new Wallet();
+        setWallet(wallet);
+    }
+    public User(){
+        setSurname("a");
+        setName("a");
+        setNumber("0000000");
+        setId(id);
+        setPassword("adafasfasfa");
+        Wallet wallet = new Wallet();
+        setWallet(wallet);
+    }
+
+    public Wallet getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
+    }
+
     public String getNumber() {
         return number;
     }
